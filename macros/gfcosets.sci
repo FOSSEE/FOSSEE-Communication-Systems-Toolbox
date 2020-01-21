@@ -15,17 +15,14 @@ function gfcs = gfcosets(m, p)
 //   Because the length of the cosets varies in the complete set, %nan is used to
 //   fill out the extra space in order to make all variables have the same
 //   length in the output matrix GFCS.
-
-
+//
+//
 //   Examples
 //   c = gfcosets(2,3)
 //   disp(c)
-
-//   See also
-//   gfminpol, gfprimdf,  gfroots
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 
 //*************************************************************************************************************************************//

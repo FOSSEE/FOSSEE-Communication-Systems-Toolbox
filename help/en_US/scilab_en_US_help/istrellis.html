@@ -1,0 +1,98 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>istrellis</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="iscatastrophic.html">&lt;&lt; iscatastrophic</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="lteZadoffChuSeq.html">lteZadoffChuSeq &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">FOSSEE_Communication_Systems_Toolbox</a> &gt;&gt; <a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a> &gt; istrellis</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">istrellis</h1>
+    <p class="refpurpose">This function checks if the given input is of trellis structure</p></div>
+
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">[ISOK, STATUS]  = ISTRELLIS(S) returns [T,&#0039;&#0039;] if the given input is valid trellis structure. Otherwise ISOK is F and STATUS
+indicates the reason for invalidity</p>
+   <p class="para">Fields in trellis structure are
+numInputSymbols,  (number of input symbols)
+numOutputSymbols, (number of output symbols)
+numStates,        (number of states)
+nextStates,       (next state matrix)
+outputs,          (output matrix)</p>
+   <p class="para">Properties of the fields are as follows
+numInputSymbols and numOutputSymbols should be a power of 2 (as data is represented in bits).
+The &#0039;nextStates&#0039; and &#0039;outputs&#0039; fields are matrices of size &#0039;numStates&#0039; x &#0039;numInputSymbols&#0039; .
+Each element in the &#0039;nextStates&#0039; matrix and &#0039;output&#0039; matrix is an integer value between zero and (numStates-1).
+The (r,c) element of the &#0039;nextStates&#0039; matrix and &#0039;output&#0039; matrix,denotes the next state and output respectively when
+the starting state is (r-1) and the input bits have decimal representation (c-1).</p>
+   <p class="para">To convert to decimal value, use the first input bit as the most significant bit (MSB).</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">Valid</span> <span class="scilabid">trellis</span> <span class="scilabid">structure</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numInputSymbols</span> <span class="scilaboperator">=</span> <span class="scilabnumber">4</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numOutputSymbols</span> <span class="scilaboperator">=</span> <span class="scilabnumber">4</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numStates</span> <span class="scilaboperator">=</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">nextStates</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">outputs</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span><span class="scilabdefault">;</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">isok</span><span class="scilabdefault">,</span><span class="scilabid">status</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">istrellis</span><span class="scilabopenclose">(</span><span class="scilabid">trellis</span><span class="scilabopenclose">)</span>
+
+<span class="scilabid">Inavlid</span> <span class="scilabid">trellis</span> <span class="scilabid">structure</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numInputSymbols</span> <span class="scilaboperator">=</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numOutputSymbols</span> <span class="scilaboperator">=</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">numStates</span> <span class="scilaboperator">=</span> <span class="scilabnumber">3</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">nextStates</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span><span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">trellis</span><span class="scilaboperator">.</span><span class="scilabfield">outputs</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabdefault">;</span><span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">isok</span><span class="scilabdefault">,</span><span class="scilabid">status</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">istrellis</span><span class="scilabopenclose">(</span><span class="scilabid">trellis</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Pola Lakshmi Priyanka, IIT Bombay</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="iscatastrophic.html">&lt;&lt; iscatastrophic</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="lteZadoffChuSeq.html">lteZadoffChuSeq &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

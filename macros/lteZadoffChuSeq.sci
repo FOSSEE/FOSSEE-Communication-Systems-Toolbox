@@ -7,23 +7,23 @@ function seq = lteZadoffChuSeq(R, N)
 //   Description
 //   SEQ = LTEZADOFFCHUSEQ(R, N) generates the Rth root Zadoff-Chu sequence (SEQ)
 //   of length N.
-
+//
 //   Examples
 //   seq1 = lteZadoffChuSeq(2, 3)
 //   disp(seq1,'seq1')
-//   Error should occur because inputs are not co primes
+//   //Error should occur because inputs are not co primes
 //   seq2 = lteZadoffChuSeq(25, 5)
 //   disp(seq2,'seq2')
-
-
+//
+//
 //   Bibliography 
 //   3rd Generation Partnership Project, Technical Specification Group Radio
 //   Access Network, Evolved Universal Terrestrial Radio Access (E-UTRA),
 //   Physical channels and modulation, Release 10, 3GPP TS 36.211, v10.0.0,
 //   2010-12.
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

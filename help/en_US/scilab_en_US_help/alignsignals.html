@@ -1,0 +1,96 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>alignsignals</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">&lt;&lt; FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="arithdeco.html">arithdeco &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">FOSSEE_Communication_Systems_Toolbox</a> &gt;&gt; <a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a> &gt; alignsignals</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">alignsignals</h1>
+    <p class="refpurpose">This function aligns the two input signals.</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">[</span><span class="default">Xa</span> <span class="default">Ya</span><span class="default">] = </span><span class="default">ALIGNSIGNALS</span><span class="default">(</span><span class="default">X</span><span class="default">,</span><span class="default">Y</span><span class="default">)</span>
+<span class="default">[</span><span class="default">Xa</span> <span class="default">Ya</span><span class="default">] = </span><span class="default">ALIGNSIGNALS</span><span class="default">(</span><span class="default">X</span><span class="default">,</span><span class="default">Y</span><span class="default">,</span><span class="default">MAXLAG</span><span class="default">)</span>
+<span class="default">[</span><span class="default">Xa</span> <span class="default">Ya</span><span class="default">] = </span><span class="default">ALIGNSIGNALS</span><span class="default">(</span><span class="default">X</span><span class="default">,</span><span class="default">Y</span><span class="default">,</span><span class="default">MAXLAG</span><span class="default">,1)</span>
+<span class="default">[</span><span class="default">Xa</span> <span class="default">Ya</span> <span class="default">D</span><span class="default">] = </span><span class="default">ALIGNSIGNALS</span><span class="default">(...)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">[Xa Ya] = ALIGNSIGNALS(X,Y) aligns the two vectors X and Y by estimating
+the delay D between the two. If Y is delayed with respect to X, D is
+positive , and X is delayed by D samples. If Y is advanced with respect
+to X, D is negative, and Y is delayed by -D samples.</p>
+   <p class="para">[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG) considers MAXLAG be the maximum correlation
+window size which is used to calculate the estimated delay D between X and Y.
+MAXLAG is an integer-valued scalar. By default, MAXLAG is equal to MAX(LX,LY)-1.
+If MAXLAG is empty ([]),then default value is considered. If MAXLAG
+is negative, it is replaced by its absolute value.</p>
+   <p class="para">[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG,1) keeps the lengths of Xa
+and Ya the same as those of X and Y, respectively.
+Here, 1 implies truncation of the intermediate vectors.
+Input argument 4 is 0 implies truncation_off (no truncation).
+D is positive implies D zeros are pre-pended to X, and the last D samples of X are truncated.
+D is negative implies -D zeros are pre-pended to Y, and the last -D samples
+of Y are truncated. That means, when D&gt;=Length(X), all samples of X are lost.
+Similarly, when -D&gt;=Length(Y), all samples of Y are lost.
+Avoid assigning a specific value to MAXLAG when using the truncate=1 option, set MAXLAG to [].</p>
+   <p class="para">[Xa Ya D] = ALIGNSIGNALS(...) returns the estimated delay D.</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">X</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">Y</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabopenclose">[</span><span class="scilabid">Xa</span><span class="scilabdefault">,</span><span class="scilabid">Ya</span><span class="scilabopenclose">]</span> <span class="scilaboperator">=</span> <span class="scilabid">alignsignals</span><span class="scilabopenclose">(</span><span class="scilabid">X</span><span class="scilabdefault">,</span><span class="scilabid">Y</span><span class="scilabdefault">,</span><span class="scilabopenclose">[</span><span class="scilabopenclose">]</span><span class="scilabdefault">,</span><span class="scilabnumber">1</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Pola Lakshmi Priyanka, IIT Bombay</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">&lt;&lt; FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="arithdeco.html">arithdeco &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

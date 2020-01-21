@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from lteZadoffChuSeq.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="lteZadoffChuSeq" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>lteZadoffChuSeq</refname>
+    <refpurpose>This function generates root Zadoff-Chu sequence of complex symbols as per LTE specifications.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+SEQ = LTEZADOFFCHUSEQ(R, N) generates the Rth root Zadoff-Chu sequence (SEQ)
+of length N.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+seq1 = lteZadoffChuSeq(2, 3)
+disp(seq1,'seq1')
+//Error should occur because inputs are not co primes
+seq2 = lteZadoffChuSeq(25, 5)
+disp(seq2,'seq2')
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Bibliography</title>
+   <para>3rd Generation Partnership Project, Technical Specification Group Radio</para>
+   <para>Access Network, Evolved Universal Terrestrial Radio Access (E-UTRA),</para>
+   <para>Physical channels and modulation, Release 10, 3GPP TS 36.211, v10.0.0,</para>
+   <para>2010-12.</para>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

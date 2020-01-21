@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from finddelay.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="finddelay" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>finddelay</refname>
+    <refpurpose>This function returns the estimated delay between two input signals using crosscorrelation.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+D = FINDDELAY(X,Y), returns estimated Delay D between X
+and Y. D is positive implies Y is delayed with respect to X and vice versa.
+If X, Y are matrices, then D is a row vector corresponding to delay between columns of X and Y
+   </para>
+   <para>
+D = FINDDELAY(...,MAXLAG), uses MAXLAG as the maximum correlation
+window size used to find the estimated delay(s) between X and Y:
+   </para>
+   <para>
+&gt; If MAXLAG is an integer-valued scalar, and X and Y are row or column
+vectors or matrices, the vector D of estimated delays is found by
+cross-correlating (the columns of) X and Y over a range of lags
+-MAXLAG:MAXLAG.
+&gt; If MAXLAG is an integer-valued row or column vector, and one input is vector
+and another be matirx (let X is a row or column vector ,
+and Y is a matrix) then the vector D of estimated delays is found by
+cross-correlating X and column J of Y over a range of lags
+-MAXLAG(J):MAXLAG(J), for J=1:Number of columns of Y.
+&gt; If MAXLAG is an integer-valued row or column vector, and X and Y are
+both matrices. then vector D of estimated delays is found by
+cross-correlating corresponding columns of X and Y over a range of lags
+-MAXLAG(J):MAXLAG(J).
+   </para>
+   <para>
+By default, MAXLAG is equal to MAX(LX,LY)-1 for vectors,
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+X = [ 0 0 1 2 3 ];
+Y = [ 0 0 0 1 2 3];
+D = finddelay(X,Y,2)
+disp(D)
+X = [ 0 1 0 0 ; 1 0 2 1 ;0 0 0 2 ];
+Y = [ 0 0 1 0 ;1 0 0 2 ; 0 0 0 0 ];
+D = finddelay(X,Y)
+disp(D)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

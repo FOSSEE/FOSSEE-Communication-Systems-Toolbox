@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from gflineq.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="gflineq" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>gflineq</refname>
+    <refpurpose>This function finds a solution for linear equation Ax = b over a prime Galois field.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+[X, SFLAG] = GFLINEQ(A, B) returns a particular solution (X) of AX=B in GF(2).
+If the equation has no solution, then X is empty and SFLAG = 0 else SFLAG = 1.
+   </para>
+   <para>
+[X, SFLAG]= GFLINEQ(A, B, P) returns a particular solution of the linear
+equation A X = B in GF(P) and SFLAG=1.
+If the equation has no solution, then X is empty and SFLAG = 0.
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+A=[1 0 1; 1 1 0; 1 1 1]
+p=3
+[x,vld] = gflineq(A,[1;0;1],p)
+disp(A,'A=')
+disp(x,'x=');
+if(vld)
+disp('Linear equation has solution x')
+else
+disp('Linear equation has no solution and x is empty')
+end
+disp( pmodulo(A*x,p),'B =')
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

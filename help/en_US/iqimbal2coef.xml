@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from iqimbal2coef.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="iqimbal2coef" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>iqimbal2coef</refname>
+    <refpurpose>This function returns the I/Q imbalance compensator coefficient for given amplitude and phase imbalance.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+COMP_COEF = IQIMBAL2COEF(AMP_IMB_DB, PH_IMB_DEG) returns the I/Q imbalance
+compensator coefficient for given amplitude and phase imbalance.
+Comp_Coef is a scalar or a vector of complex numbers.
+AMP_IMB_DB and PH_IMB_DEG are the amplitude imbalance in dB
+and the phase imbalance in degrees and should be of same size.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+[a_imb_db,ph_imb_deg] = iqcoef2imbal([4 2 complex(-0.1145,0.1297) complex(-0.0013,0.0029)])
+disp(a_imb_db,'amplitude imbalance in dB =')
+disp(ph_imb_deg,'phase imbalance in degrees=')
+Comp_Coef = iqimbal2coef(a_imb_db, ph_imb_deg)
+disp(Comp_Coef,'Compensator Coefficients=')
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

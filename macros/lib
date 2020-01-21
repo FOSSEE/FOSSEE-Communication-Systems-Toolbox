@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <scilablib name="FOSSEE_Communication_Systems_Toolboxlib">
-  <macro name="alignsignals" file="alignsignals.bin" md5="6795c5e3a80214bc558a8de3cb9e70ed"/>
-  <macro name="arithdeco" file="arithdeco.bin" md5="9b79360e11022a61df294c3faf92dd4c"/>
-  <macro name="arithenco" file="arithenco.bin" md5="5f797fa534d618e26419f0e07b494426"/>
-  <macro name="finddelay" file="finddelay.bin" md5="780f1ae166109a71498a132f4db4da36"/>
-  <macro name="gfcosets" file="gfcosets.bin" md5="491594b4052aec2305005e6ddd217658"/>
-  <macro name="gflineq" file="gflineq.bin" md5="bb3e6416db103d09fa5a314dfef539e8"/>
-  <macro name="gfrepcov" file="gfrepcov.bin" md5="28da79e826fe62a9b4bab2bbfa11c6ed"/>
-  <macro name="gftrunc" file="gftrunc.bin" md5="fe2e351203028638df0022bb6c64cc90"/>
-  <macro name="iqcoef2imbal" file="iqcoef2imbal.bin" md5="97c879ba51333778a30f7dde84d4d56f"/>
-  <macro name="iqimbal2coef" file="iqimbal2coef.bin" md5="4feef6170bda7abbbabde79aae78eff4"/>
-  <macro name="iscatastrophic" file="iscatastrophic.bin" md5="278f799083ff369a67f159458175829b"/>
-  <macro name="istrellis" file="istrellis.bin" md5="4f81dbadca9dc852b04bf2ff3298608c"/>
-  <macro name="lteZadoffChuSeq" file="lteZadoffChuSeq.bin" md5="2902786966ab019c3619dab250a26f7e"/>
-  <macro name="ssbdemod" file="ssbdemod.bin" md5="bbc800029ef280969229d9c26b7eac5a"/>
+  <macro name="alignsignals" file="alignsignals.bin" md5="cb116d6026da95835054abdc45a0c635"/>
+  <macro name="arithdeco" file="arithdeco.bin" md5="bb69e85438c5f175f807cd1013e3de7c"/>
+  <macro name="arithenco" file="arithenco.bin" md5="34b06803adf8ed10832552f6bb6dca5b"/>
+  <macro name="finddelay" file="finddelay.bin" md5="6d397aa5c6a72e9f557b10e000a21428"/>
+  <macro name="gfcosets" file="gfcosets.bin" md5="f928635d1206c467840183b84f016a4b"/>
+  <macro name="gflineq" file="gflineq.bin" md5="b9d05708651815a112dd7a18ea356583"/>
+  <macro name="gfrepcov" file="gfrepcov.bin" md5="e550ee23c65d6f84dc519a5f2d7e2343"/>
+  <macro name="gftrunc" file="gftrunc.bin" md5="9e0e57094deb06fc1279318a609c892b"/>
+  <macro name="iqcoef2imbal" file="iqcoef2imbal.bin" md5="458754b3c5b8f84cff43b09633cbfe0a"/>
+  <macro name="iqimbal2coef" file="iqimbal2coef.bin" md5="0cf10b0d70f133d030c5154167e55f94"/>
+  <macro name="iscatastrophic" file="iscatastrophic.bin" md5="40ea9c8cceda9749ab324a096b3025e7"/>
+  <macro name="istrellis" file="istrellis.bin" md5="f3fab41ac8416f201ad0767e9fac1e2c"/>
+  <macro name="lteZadoffChuSeq" file="lteZadoffChuSeq.bin" md5="857ddd243d196eca04951182873c74eb"/>
+  <macro name="octave_functions" file="octave_functions.bin" md5="ac3663346a69f18847150b5853a62557"/>
+  <macro name="ssbdemod" file="ssbdemod.bin" md5="3af17103272263af9cf40f35d2a2499b"/>
 </scilablib>

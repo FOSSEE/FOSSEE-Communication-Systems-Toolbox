@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE book [
 <!--Begin Entities-->
+<!ENTITY abbab6e363c5628eaebbbb13af15017d1 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/alignsignals.xml">
+<!ENTITY a6cf26bc826aa2a13e513479fb771b8d3 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/arithdeco.xml">
 <!ENTITY aaa30023c011c2d00a22694ae6ca55e21 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/arithenco.xml">
+<!ENTITY a954ba0e19a1c282aadb2037003a2e24f SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/finddelay.xml">
+<!ENTITY a3e8e25b8e9087f74b6ced8480944e12e SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/gfcosets.xml">
+<!ENTITY af493f190190f2350b9c9005d568729d4 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/gflineq.xml">
+<!ENTITY ac7c236c674443f8359b379eb7984fae6 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/gfrepcov.xml">
+<!ENTITY a73d0cf80beb8a70a9dbce1b0beafddfc SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/gftrunc.xml">
+<!ENTITY a99eb36b2a384db7518eb509623d77dd8 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/iqcoef2imbal.xml">
+<!ENTITY a64b4ed87241b1bed1ad876766668de08 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/iqimbal2coef.xml">
+<!ENTITY a00eb0d4504e4b1f052e536c9853260cb SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/iscatastrophic.xml">
+<!ENTITY a19ba4e809aea0bd30dc4d6556467ce7b SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/istrellis.xml">
+<!ENTITY acc68b7f28731c4a6dd38df2902862041 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/lteZadoffChuSeq.xml">
+<!ENTITY ace4dca7c71cdc2b40ea29e7f4b7677f1 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/octave_functions.xml">
+<!ENTITY ab8c34ae1e9b36a8768c0265578560679 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/ssbdemod.xml">
 <!--End Entities-->
 ]>
 <book version="5.0-subset Scilab" xml:lang="en_US"
@@ -18,6 +32,20 @@
 
 <part xml:id='section_1f049b1e3111e3d1d538e7603f77f589'>
 <title>FOSSEE_Communication_Systems_Toolbox</title>
+&abbab6e363c5628eaebbbb13af15017d1;
+&a6cf26bc826aa2a13e513479fb771b8d3;
 &aaa30023c011c2d00a22694ae6ca55e21;
+&a954ba0e19a1c282aadb2037003a2e24f;
+&a3e8e25b8e9087f74b6ced8480944e12e;
+&af493f190190f2350b9c9005d568729d4;
+&ac7c236c674443f8359b379eb7984fae6;
+&a73d0cf80beb8a70a9dbce1b0beafddfc;
+&a99eb36b2a384db7518eb509623d77dd8;
+&a64b4ed87241b1bed1ad876766668de08;
+&a00eb0d4504e4b1f052e536c9853260cb;
+&a19ba4e809aea0bd30dc4d6556467ce7b;
+&acc68b7f28731c4a6dd38df2902862041;
+&ace4dca7c71cdc2b40ea29e7f4b7677f1;
+&ab8c34ae1e9b36a8768c0265578560679;
 </part>
 </book>

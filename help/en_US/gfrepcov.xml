@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from gfrepcov.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="gfrepcov" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>gfrepcov</refname>
+    <refpurpose>This function represents a binary polynomial in standard ascending order format.</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+Q = GFREPCOV(P) converts vector (P) to standard ascending
+order format vector (Q), which is a vector that lists the coefficients in
+order of ascending exponents,  if P represents a binary polynomial
+as a vector of exponents with non-zero coefficients.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+The matrix below represents the binary polynomial $1 + s + s^2 + s^4$
+Implies output vector should be [1 1 1 0 1]
+A=[0 1 2 4 ]
+B=gfrepcov(A)
+disp(B)
+
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

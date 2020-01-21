@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from alignsignals.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="alignsignals" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>alignsignals</refname>
+    <refpurpose>This function aligns the two input signals.</refpurpose>
+  </refnamediv>
+
+
+<refsynopsisdiv>
+   <title>Syntax</title>
+   <synopsis>
+   [Xa Ya] = ALIGNSIGNALS(X,Y)
+   [Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG)
+   [Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG,1)
+   [Xa Ya D] = ALIGNSIGNALS(...)
+   
+   </synopsis>
+</refsynopsisdiv>
+
+<refsection>
+   <title>Description</title>
+   <para>
+[Xa Ya] = ALIGNSIGNALS(X,Y) aligns the two vectors X and Y by estimating
+the delay D between the two. If Y is delayed with respect to X, D is
+positive , and X is delayed by D samples. If Y is advanced with respect
+to X, D is negative, and Y is delayed by -D samples.
+   </para>
+   <para>
+[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG) considers MAXLAG be the maximum correlation
+window size which is used to calculate the estimated delay D between X and Y.
+MAXLAG is an integer-valued scalar. By default, MAXLAG is equal to MAX(LX,LY)-1.
+If MAXLAG is empty ([]),then default value is considered. If MAXLAG
+is negative, it is replaced by its absolute value.
+   </para>
+   <para>
+[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG,1) keeps the lengths of Xa
+and Ya the same as those of X and Y, respectively.
+Here, 1 implies truncation of the intermediate vectors.
+Input argument 4 is 0 implies truncation_off (no truncation).
+D is positive implies D zeros are pre-pended to X, and the last D samples of X are truncated.
+D is negative implies -D zeros are pre-pended to Y, and the last -D samples
+of Y are truncated. That means, when D&gt;=Length(X), all samples of X are lost.
+Similarly, when -D&gt;=Length(Y), all samples of Y are lost.
+Avoid assigning a specific value to MAXLAG when using the truncate=1 option, set MAXLAG to [].
+   </para>
+   <para>
+[Xa Ya D] = ALIGNSIGNALS(...) returns the estimated delay D.
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+X = [0 0 0 1 2 3 ];
+Y = [1 2 3 ];
+[Xa,Ya] = alignsignals(X,Y,[],1)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

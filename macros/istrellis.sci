@@ -1,30 +1,29 @@
 function [isOk, status]  = istrellis(S)
-
 //    This function checks if the given input is of trellis structure
-
+//
 //    Calling Sequence
 //    [ISOK, STATUS]  = ISTRELLIS(S)
 // 
 //    Description
 //    [ISOK, STATUS]  = ISTRELLIS(S) returns [T,''] if the given input is valid trellis structure. Otherwise ISOK is F and STATUS 
 //    indicates the reason for invalidity
-
+//
 //    Fields in trellis structure are 
 //    numInputSymbols,  (number of input symbols)
 //    numOutputSymbols, (number of output symbols)
 //    numStates,        (number of states)
 //    nextStates,       (next state matrix)
 //    outputs,          (output matrix)
-
+//
 //    Properties of the fields are as follows
 //    numInputSymbols and numOutputSymbols should be a power of 2 (as data is represented in bits).
 //    The 'nextStates' and 'outputs' fields are matrices of size 'numStates' x 'numInputSymbols' .
 //    Each element in the 'nextStates' matrix and 'output' matrix is an integer value between zero and (numStates-1).
 //    The (r,c) element of the 'nextStates' matrix and 'output' matrix,denotes the next state and output respectively when
 //    the starting state is (r-1) and the input bits have decimal representation (c-1).
-
+//
 //    To convert to decimal value, use the first input bit as the most significant bit (MSB).
-
+//
 //    Examples
 //    Valid trellis structure
 //    trellis.numInputSymbols = 4;
@@ -33,7 +32,7 @@ function [isOk, status]  = istrellis(S)
 //    trellis.nextStates = [0 1 2 1;0 1 2 1; 0 1 2 1];
 //    trellis.outputs = [0 0 1 1;1 1 2 1; 1 0 1 1];
 //    [isok,status] = istrellis(trellis)
-
+//
 //    Inavlid trellis structure
 //    trellis.numInputSymbols = 3;
 //    trellis.numOutputSymbols = 3;
@@ -41,12 +40,9 @@ function [isOk, status]  = istrellis(S)
 //    trellis.nextStates = [0 1 2 ;0 1 2 ; 0 1 2 ];
 //    trellis.outputs = [0 0 1 ;1 1 2 ; 1 0 1 ];
 //    [isok,status] = istrellis(trellis)
-
-//    See also
-//    iscatastrophic
-
+//
 //    Authors
-//    Pola Lakshmi Priyanka, IIT Bombay//
+//    Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

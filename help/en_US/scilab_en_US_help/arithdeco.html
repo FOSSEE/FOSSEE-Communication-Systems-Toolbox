@@ -1,0 +1,85 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>arithdeco</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="alignsignals.html">&lt;&lt; alignsignals</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="arithenco.html">arithenco &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">FOSSEE_Communication_Systems_Toolbox</a> &gt;&gt; <a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a> &gt; arithdeco</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">arithdeco</h1>
+    <p class="refpurpose">This function decodes the given code using arithmetic coding</p></div>
+
+
+<div class="refsynopsisdiv"><h3 class="title">Syntax</h3>
+   <div class="synopsis"><pre><span class="default">SEQ</span><span class="default"> = </span><span class="default">ARITHDECO</span><span class="default">(</span><span class="default">CODE</span><span class="default">, </span><span class="default">COUNT</span><span class="default">, </span><span class="default">LEN</span><span class="default">)</span></pre></div></div>
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">SEQ = ARITHDECO(CODE, COUNT, LEN) decodes the given received seq (CODE) to message using arithmetic coding.
+COUNT is vector which gives information about the source statistics (i.e. frequency of each symbol in the source alphabet)
+CODE is the binary arithmetic code</p>
+   <p class="para">Source Alphabet is assumed to be {1,2,....N} where N is a positive integer
+Therefore, sequence should be finite and positive
+Length of the COUNT should match the length of the source alphabet</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">counts</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">40</span> <span class="scilabnumber">1</span> <span class="scilabnumber">9</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">len</span> <span class="scilaboperator">=</span> <span class="scilabnumber">11</span><span class="scilabdefault">;</span>
+<span class="scilabid">seq</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span><span class="scilabnumber">1</span> <span class="scilabnumber">3</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">3</span> <span class="scilabnumber">3</span> <span class="scilabnumber">1</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabopenclose">]</span>
+<span class="scilabid">code</span> <span class="scilaboperator">=</span> <span class="scilabid">arithenco</span><span class="scilabopenclose">(</span><span class="scilabid">seq</span><span class="scilabdefault">,</span><span class="scilabid">counts</span><span class="scilabopenclose">)</span><span class="scilabdefault">;</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">code</span><span class="scilabopenclose">)</span>
+<span class="scilabid">dseq</span><span class="scilaboperator">=</span><span class="scilabid">arithdeco</span><span class="scilabopenclose">(</span><span class="scilabid">code</span><span class="scilabdefault">,</span><span class="scilabid">counts</span><span class="scilabdefault">,</span><span class="scilabid">len</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">dseq</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">seq</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Pola Lakshmi Priyanka, IIT Bombay</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="alignsignals.html">&lt;&lt; alignsignals</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="arithenco.html">arithenco &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

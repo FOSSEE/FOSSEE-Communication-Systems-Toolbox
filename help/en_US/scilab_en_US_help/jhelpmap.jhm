@@ -3,5 +3,19 @@
 <map version="1.0">
 <mapID target="index" url="index.html"/>
 <mapID target="section_1f049b1e3111e3d1d538e7603f77f589" url="section_1f049b1e3111e3d1d538e7603f77f589.html"/>
+<mapID target="alignsignals" url="alignsignals.html"/>
+<mapID target="arithdeco" url="arithdeco.html"/>
 <mapID target="arithenco" url="arithenco.html"/>
+<mapID target="finddelay" url="finddelay.html"/>
+<mapID target="gfcosets" url="gfcosets.html"/>
+<mapID target="gflineq" url="gflineq.html"/>
+<mapID target="gfrepcov" url="gfrepcov.html"/>
+<mapID target="gftrunc" url="gftrunc.html"/>
+<mapID target="iqcoef2imbal" url="iqcoef2imbal.html"/>
+<mapID target="iqimbal2coef" url="iqimbal2coef.html"/>
+<mapID target="iscatastrophic" url="iscatastrophic.html"/>
+<mapID target="istrellis" url="istrellis.html"/>
+<mapID target="lteZadoffChuSeq" url="lteZadoffChuSeq.html"/>
+<mapID target="octave_functions" url="octave_functions.html"/>
+<mapID target="ssbdemod" url="ssbdemod.html"/>
 </map>

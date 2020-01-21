@@ -1,18 +1,18 @@
 function [seq] = arithdeco(code, count, len)
 //   This function decodes the given code using arithmetic coding    
-    
-//   Calling sequence
+//    
+//   Syntax
 //   SEQ = ARITHDECO(CODE, COUNT, LEN) 
 //
 //   Description
 //   SEQ = ARITHDECO(CODE, COUNT, LEN) decodes the given received seq (CODE) to message using arithmetic coding.
-//   COUNT is vector whihc gives information about the source statistics (i.e. frequency of each symbol in the source alphabet)
+//   COUNT is vector which gives information about the source statistics (i.e. frequency of each symbol in the source alphabet)
 //   CODE is the binary arithmetic code
-    
+//    
 //   Source Alphabet is assumed to be {1,2,....N} where N is a positive integer
 //   Therefore, sequence should be finite and positive 
 //   Length of the COUNT should match the length of the source alphabet
-
+//
 //   Examples 
 //   counts = [40 1 9];
 //   len = 11;
@@ -22,20 +22,11 @@ function [seq] = arithdeco(code, count, len)
 //   dseq=arithdeco(code,counts,len)
 //   disp(dseq)
 //   disp(seq)
-    
-//   Bibliography 
-//   Sayood, K., Introduction to Data Compression, Morgan Kaufmann, 2000, Chapter 4, Section 4.4.3.
-    
-//   See also 
-//   arithenco
-    
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
-
-//*************************************************************************************************************************************//
-    
-    //Input argument check
+//Input argument check
     
     [outa,inpa]=argn(0);
     if(~inpa==3)

@@ -1,16 +1,16 @@
 function d = finddelay(x,y,varargin)
 //   This function returns the estimated delay between two input signals using crosscorrelation.
 //   If signals are periodic, delay with least absolute value is returned.
-
+//
 //   Calling Sequence
 //   D = FINDDELAY(X,Y)
 //   D = FINDDELAY(...,MAXLAG)
-
+//
 //   Description
 //   D = FINDDELAY(X,Y), returns estimated Delay D between X
 //   and Y. D is positive implies Y is delayed with respect to X and vice versa. 
 //   If X, Y are matrices, then D is a row vector corresponding to delay between columns of X and Y
-
+//
 //   D = FINDDELAY(...,MAXLAG), uses MAXLAG as the maximum correlation
 //   window size used to find the estimated delay(s) between X and Y:
 //  
@@ -29,7 +29,7 @@ function d = finddelay(x,y,varargin)
 //      -MAXLAG(J):MAXLAG(J).
 //
 //   By default, MAXLAG is equal to MAX(LX,LY)-1 for vectors,
-
+//
 //   Examples
 //   X = [ 0 0 1 2 3 ];
 //   Y = [ 0 0 0 1 2 3]; 
@@ -39,12 +39,9 @@ function d = finddelay(x,y,varargin)
 //   Y = [ 0 0 1 0 ;1 0 0 2 ; 0 0 0 0 ];
 //   D = finddelay(X,Y)
 //   disp(D)
-
-//   See also 
-//   alignsignals
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 
 //*************************************************************************************************************************************//

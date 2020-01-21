@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from istrellis.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="istrellis" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>istrellis</refname>
+    <refpurpose>This function checks if the given input is of trellis structure</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+[ISOK, STATUS]  = ISTRELLIS(S) returns [T,''] if the given input is valid trellis structure. Otherwise ISOK is F and STATUS
+indicates the reason for invalidity
+   </para>
+   <para>
+Fields in trellis structure are
+numInputSymbols,  (number of input symbols)
+numOutputSymbols, (number of output symbols)
+numStates,        (number of states)
+nextStates,       (next state matrix)
+outputs,          (output matrix)
+   </para>
+   <para>
+Properties of the fields are as follows
+numInputSymbols and numOutputSymbols should be a power of 2 (as data is represented in bits).
+The 'nextStates' and 'outputs' fields are matrices of size 'numStates' x 'numInputSymbols' .
+Each element in the 'nextStates' matrix and 'output' matrix is an integer value between zero and (numStates-1).
+The (r,c) element of the 'nextStates' matrix and 'output' matrix,denotes the next state and output respectively when
+the starting state is (r-1) and the input bits have decimal representation (c-1).
+   </para>
+   <para>
+To convert to decimal value, use the first input bit as the most significant bit (MSB).
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+Valid trellis structure
+trellis.numInputSymbols = 4;
+trellis.numOutputSymbols = 4;
+trellis.numStates = 3;
+trellis.nextStates = [0 1 2 1;0 1 2 1; 0 1 2 1];
+trellis.outputs = [0 0 1 1;1 1 2 1; 1 0 1 1];
+[isok,status] = istrellis(trellis)
+
+Inavlid trellis structure
+trellis.numInputSymbols = 3;
+trellis.numOutputSymbols = 3;
+trellis.numStates = 3;
+trellis.nextStates = [0 1 2 ;0 1 2 ; 0 1 2 ];
+trellis.outputs = [0 0 1 ;1 1 2 ; 1 0 1 ];
+[isok,status] = istrellis(trellis)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>

@@ -1,9 +1,9 @@
 function [code] = arithenco(seq, count)
 //   This function encodes the given sequence using aritmetic coding
-
+//
 //   Syntax
 //   CODE = ARITHENCO(SEQ, COUNT)
-
+//
 //   Description
 //   CODE = ARITHENCO(SEQ, COUNT) encodes the given sequence (SEQ) using arithmetic coding.
 //   COUNT is vector whihc gives information about the source statistics (i.e. frequency of each symbol in the source alphabet)
@@ -11,22 +11,19 @@ function [code] = arithenco(seq, count)
 //   Source Alphabet is assumed to be {1,2,....N} where N is a positive integer
 //   Therefore, sequence should be finite and positive 
 //   Length of the COUNT should match the length of the source alphabet
-
+//
 //   Examples    
 //   counts = [40 1 9];
 //   len = 4;
 //   seq = [1 3 2 1]
 //   code = arithenco(seq,counts);
 //   disp(code)
-    
+//   
 //   Bibliography
 //   Sayood, K., Introduction to Data Compression, Morgan Kaufmann, 2000, Chapter 4, Section 4.4.3.
-
-//   See also 
-//   arithdeco
-    
+//    
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 
 //*************************************************************************************************************************************//

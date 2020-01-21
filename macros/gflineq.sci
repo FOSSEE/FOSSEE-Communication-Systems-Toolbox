@@ -13,7 +13,7 @@ function [x, sflag] = gflineq(a, b, p)
 //   equation A X = B in GF(P) and SFLAG=1.
 //   If the equation has no solution, then X is empty and SFLAG = 0.
 //
-
+//
 //   Examples
 //   A=[1 0 1; 1 1 0; 1 1 1]
 //   p=3
@@ -26,12 +26,9 @@ function [x, sflag] = gflineq(a, b, p)
 //     disp('Linear equation has no solution and x is empty')
 //   end
 //   disp( pmodulo(A*x,p),'B =')
-
-//   See also
-//   gfadd, gfconv, gfdiv, gfrank, gfroots
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 
 //*************************************************************************************************************************************//

@@ -1,25 +1,21 @@
 function at=gftrunc(a)
 //This function is used to truncate the higher order zeroes in the given polynomial equation
-
-//Calling Sequence
+//
+//  Calling Sequence
 //AT=GFTRUNC(A)
-    
-//Description
+//   
+//  Description
 //A is considered to be matrix that gives the coefficients of polynomial GF(p) in ascending order powers
 //A = [1 2 3] denotes 1 + 2 x + 3 x^2    
 //AT=GFTRUNC(A) returns a matrix which gives the polynomial GF(p) truncating the input matrix 
 //that is if A(i)=0, where i > d + 1, where d is the degree of the polynomial, that zero is removed
-    
+//    
 //Examples
-//A= [ 0 0 1 4 0 0] returns [0 0 1 4]
+//A= [ 0 0 1 4 0 0]
 //c = gftrunc([0 0 1 2 3 0 0 0 4 5 0 1 0 0])
-
-    
-//See also
-//gfadd, gfconv, gfdeconv, gfsub, gftuple
-
+//
 //Authors
-//Pola Lakshmi Priyanka, IIT Bombay//
+//Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 // Check number of input arguments

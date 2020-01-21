@@ -1,28 +1,25 @@
 function q = gfrepcov(p)
 //   This function represents a binary polynomial in standard ascending order format.
-
+//
 //   Calling Sequence
 //   Q = GFREPCOV(P)
-
+//
 //   Description
 //   Q = GFREPCOV(P) converts vector (P) to standard ascending
 //   order format vector (Q), which is a vector that lists the coefficients in 
 //   order of ascending exponents,  if P represents a binary polynomial 
 //   as a vector of exponents with non-zero coefficients.
-
+//
 //   Examples
 //   The matrix below represents the binary polynomial $1 + s + s^2 + s^4$
 //   Implies output vector should be [1 1 1 0 1]
 //   A=[0 1 2 4 ]
 //   B=gfrepcov(A)
 //   disp(B)
-//   Also try A=[1 2 3 4 4] which is incorrect way of representing binary polynomial
-
-//   See also
-//   gfpretty
-
+//   
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

@@ -1,14 +1,10 @@
 function result = iscatastrophic(trellis)
-
 //   This function  determines if a convolutional code is catastrophic or not
-
 //   Calling Sequence
 //   RESULT = ISCATASTROPHIC(TRELLIS)
-
 //   Description
 //   RESULT = ISCATASTROPHIC(TRELLIS) returns 1 if the specified 
 //   trellis corresponds to a catastrophic convolutional code, else 0.
-
 //   Examples 
 //   eg_1.numInputSymbols = 4;
 //   eg_1.numOutputSymbols = 4;
@@ -22,7 +18,6 @@ function result = iscatastrophic(trellis)
 //   else
 //       disp('Example 1 is not catastrophic')
 //   end
-
 //   eg_2.numInputSymbols = 2;
 //   eg_2.numOutputSymbols = 4;
 //   eg_2.numStates = 2;
@@ -35,13 +30,8 @@ function result = iscatastrophic(trellis)
 //   else
 //       disp('Example 2 is not catastrophic')
 //   end 
-
-
-//   See also
-//   istrellis
-
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

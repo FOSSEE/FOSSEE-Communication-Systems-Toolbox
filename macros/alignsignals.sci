@@ -36,11 +36,8 @@ function varargout = alignsignals(x,y,varargin)
 //   Y = [1 2 3 ];
 //   [Xa,Ya] = alignsignals(X,Y,[],1)
 //
-//   See also 
-//   finddelay
-//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 // Check number of input arguments
 [out_a,inp_a]=argn(0)

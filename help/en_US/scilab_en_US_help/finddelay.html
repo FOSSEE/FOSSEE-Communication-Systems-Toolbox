@@ -1,0 +1,95 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>finddelay</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="arithenco.html">&lt;&lt; arithenco</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="gfcosets.html">gfcosets &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">FOSSEE_Communication_Systems_Toolbox</a> &gt;&gt; <a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a> &gt; finddelay</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">finddelay</h1>
+    <p class="refpurpose">This function returns the estimated delay between two input signals using crosscorrelation.</p></div>
+
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">D = FINDDELAY(X,Y), returns estimated Delay D between X
+and Y. D is positive implies Y is delayed with respect to X and vice versa.
+If X, Y are matrices, then D is a row vector corresponding to delay between columns of X and Y</p>
+   <p class="para">D = FINDDELAY(...,MAXLAG), uses MAXLAG as the maximum correlation
+window size used to find the estimated delay(s) between X and Y:</p>
+   <p class="para">&gt; If MAXLAG is an integer-valued scalar, and X and Y are row or column
+vectors or matrices, the vector D of estimated delays is found by
+cross-correlating (the columns of) X and Y over a range of lags
+-MAXLAG:MAXLAG.
+&gt; If MAXLAG is an integer-valued row or column vector, and one input is vector
+and another be matirx (let X is a row or column vector ,
+and Y is a matrix) then the vector D of estimated delays is found by
+cross-correlating X and column J of Y over a range of lags
+-MAXLAG(J):MAXLAG(J), for J=1:Number of columns of Y.
+&gt; If MAXLAG is an integer-valued row or column vector, and X and Y are
+both matrices. then vector D of estimated delays is found by
+cross-correlating corresponding columns of X and Y over a range of lags
+-MAXLAG(J):MAXLAG(J).</p>
+   <p class="para">By default, MAXLAG is equal to MAX(LX,LY)-1 for vectors,</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">X</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">Y</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span><span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">finddelay</span><span class="scilabopenclose">(</span><span class="scilabid">X</span><span class="scilabdefault">,</span><span class="scilabid">Y</span><span class="scilabdefault">,</span><span class="scilabnumber">2</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">D</span><span class="scilabopenclose">)</span>
+<span class="scilabid">X</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabdefault">;</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">2</span> <span class="scilabnumber">1</span> <span class="scilabdefault">;</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">2</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">Y</span> <span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabdefault">;</span><span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">2</span> <span class="scilabdefault">;</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabopenclose">]</span><span class="scilabdefault">;</span>
+<span class="scilabid">D</span> <span class="scilaboperator">=</span> <span class="scilabid">finddelay</span><span class="scilabopenclose">(</span><span class="scilabid">X</span><span class="scilabdefault">,</span><span class="scilabid">Y</span><span class="scilabopenclose">)</span>
+<a class="scilabcommand" href="scilab://disp">disp</a><span class="scilabopenclose">(</span><span class="scilabid">D</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Pola Lakshmi Priyanka, IIT Bombay</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="arithenco.html">&lt;&lt; arithenco</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="gfcosets.html">gfcosets &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

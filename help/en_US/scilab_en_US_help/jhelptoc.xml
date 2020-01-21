@@ -3,7 +3,21 @@
 <toc version="1.0">
 <tocitem target="index" text="FOSSEE_Communication_Systems_Toolbox">
 <tocitem target="section_1f049b1e3111e3d1d538e7603f77f589" text="FOSSEE_Communication_Systems_Toolbox">
+<tocitem target="alignsignals" text="alignsignals"/>
+<tocitem target="arithdeco" text="arithdeco"/>
 <tocitem target="arithenco" text="arithenco"/>
+<tocitem target="finddelay" text="finddelay"/>
+<tocitem target="gfcosets" text="gfcosets"/>
+<tocitem target="gflineq" text="gflineq"/>
+<tocitem target="gfrepcov" text="gfrepcov"/>
+<tocitem target="gftrunc" text="gftrunc"/>
+<tocitem target="iqcoef2imbal" text="iqcoef2imbal"/>
+<tocitem target="iqimbal2coef" text="iqimbal2coef"/>
+<tocitem target="iscatastrophic" text="iscatastrophic"/>
+<tocitem target="istrellis" text="istrellis"/>
+<tocitem target="lteZadoffChuSeq" text="lteZadoffChuSeq"/>
+<tocitem target="octave_functions" text="octave_functions"/>
+<tocitem target="ssbdemod" text="ssbdemod"/>
 </tocitem>
 </tocitem>
 </toc>

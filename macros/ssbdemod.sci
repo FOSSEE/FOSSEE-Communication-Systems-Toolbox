@@ -1,12 +1,11 @@
-function z = ssbdemod(y, Fc, Fs, varargin)
-    
+function z = ssbdemod(y, Fc, Fs, varargin)    
 //   This function performs Single Side Band Amplitude Demodulation
-
+//
 //   Calling Sequence
 //   Z = SSBDEMOD(Y,Fc,Fs) 
 //   Z = SSBDEMOD(Y,Fc,Fs,INI_PHASE) 
 //   Z = SSBDEMOD(Y,Fc,Fs,INI_PHASE,NUM,DEN) 
-
+//
 //   Description
 //   Z = SSBDEMOD(Y,Fc,Fs) 
 //   demodulates the single sideband amplitude modulated signal Y 
@@ -24,10 +23,10 @@ function z = ssbdemod(y, Fc, Fs, varargin)
 //
 //   Fs must satisfy Fs >2*(Fc + BW), where BW is the bandwidth of the
 //   modulating signal.
- 
-
+// 
+//
 //   Examples
-
+//
 //   Fs =200;
 //   t = [0:2*Fs+1]'/Fs;
 //   ini_phase = 5;
@@ -58,12 +57,9 @@ function z = ssbdemod(y, Fc, Fs, varargin)
 //   title('Demodulated signal');
 //   subplot(3,1,3); plot(axis,zz1);
 //   title('Spectrum of Demodulated signal');
-
-//   See also 
-//   ssbmod
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

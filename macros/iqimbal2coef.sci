@@ -1,31 +1,25 @@
 function Comp_Coef = iqimbal2coef(Amp_Imb_dB, Ph_Imb_Deg)
 //   This function returns the I/Q imbalance compensator coefficient for given amplitude and phase imbalance.
-
+//
 //   Calling Sequence
 //   COMP_COEF = IQIMBAL2COEF(AMP_IMB_DB, PH_IMB_DEG)
-
+//
 //   Description
 //   COMP_COEF = IQIMBAL2COEF(AMP_IMB_DB, PH_IMB_DEG) returns the I/Q imbalance 
 //   compensator coefficient for given amplitude and phase imbalance.
 //   Comp_Coef is a scalar or a vector of complex numbers.
 //   AMP_IMB_DB and PH_IMB_DEG are the amplitude imbalance in dB
 //   and the phase imbalance in degrees and should be of same size.
-
+//
 //   Examples
 //   [a_imb_db,ph_imb_deg] = iqcoef2imbal([4 2 complex(-0.1145,0.1297) complex(-0.0013,0.0029)])
 //   disp(a_imb_db,'amplitude imbalance in dB =')
 //   disp(ph_imb_deg,'phase imbalance in degrees=')
 //   Comp_Coef = iqimbal2coef(a_imb_db, ph_imb_deg)
 //   disp(Comp_Coef,'Compensator Coefficients=')
-
-//   Bibliography
-//   http://in.mathworks.com/help/comm/ref/iqimbal2coef.html
-
-//   See also
-//   iqcoef2imbal
-
+//
 //   Authors
-//   Pola Lakshmi Priyanka, IIT Bombay//
+//   Pola Lakshmi Priyanka, IIT Bombay
 
 //*************************************************************************************************************************************//
 

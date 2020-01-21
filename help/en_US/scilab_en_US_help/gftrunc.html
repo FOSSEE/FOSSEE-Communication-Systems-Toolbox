@@ -1,0 +1,74 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>gftrunc</title>
+    <style type="text/css" media="all">
+      @import url("scilab_code.css");
+      @import url("xml_code.css");
+      @import url("c_code.css");
+      @import url("style.css");
+    </style>
+  </head>
+  <body>
+    <div class="manualnavbar">
+    <table width="100%"><tr>
+      <td width="30%">
+    	<span class="previous"><a href="gfrepcov.html">&lt;&lt; gfrepcov</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="iqcoef2imbal.html">iqcoef2imbal &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+
+
+
+    <span class="path" dir="ltr"><a href="index.html">FOSSEE_Communication_Systems_Toolbox</a> &gt;&gt; <a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a> &gt; gftrunc</span>
+
+    <br /><br />
+    <div class="refnamediv"><h1 class="refname">gftrunc</h1>
+    <p class="refpurpose">This function is used to truncate the higher order zeroes in the given polynomial equation</p></div>
+
+
+<div class="refsection"><h3 class="title">Description</h3>
+   <p class="para">A is considered to be matrix that gives the coefficients of polynomial GF(p) in ascending order powers
+A = [1 2 3] denotes 1 + 2 x + 3 x^2
+AT=GFTRUNC(A) returns a matrix which gives the polynomial GF(p) truncating the input matrix
+that is if A(i)=0, where i &gt; d + 1, where d is the degree of the polynomial, that zero is removed</p>
+   <p class="para"></p></div>
+
+<div class="refsection"><h3 class="title">Examples</h3>
+   <div class="programlisting"><table border="0" width="100%"><tr><td width="98%"><pre class="scilabcode"><span class="scilabid">A</span><span class="scilaboperator">=</span> <span class="scilabopenclose">[</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">4</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span><span class="scilabopenclose">]</span>
+<span class="scilabid">c</span> <span class="scilaboperator">=</span> <span class="scilabid">gftrunc</span><span class="scilabopenclose">(</span><span class="scilabopenclose">[</span><span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">2</span> <span class="scilabnumber">3</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span> <span class="scilabnumber">4</span> <span class="scilabnumber">5</span> <span class="scilabnumber">0</span> <span class="scilabnumber">1</span> <span class="scilabnumber">0</span> <span class="scilabnumber">0</span><span class="scilabopenclose">]</span><span class="scilabopenclose">)</span></pre></td><td valign="top"><a href="scilab://scilab.execexample/"><img src="ScilabExecute.png" border="0"/></a></td><td valign="top"><a href="scilab://scilab.editexample/"><img src="ScilabEdit.png" border="0"/></a></td><td></td></tr></table></div></div>
+
+<div class="refsection"><h3 class="title">Authors</h3>
+   <ul class="itemizedlist"><li class="member">Pola Lakshmi Priyanka, IIT Bombay</li></ul></div>
+    <br />
+
+    <div class="manualnavbar">
+    <table width="100%">
+    <tr><td colspan="3" class="next"><a href="http://bugzilla.scilab.org/enter_bug.cgi?product=Scilab%20software&component=Documentation%20pages" class="ulink">Report an issue</a></td></tr>
+<tr>
+      <td width="30%">
+    	<span class="previous"><a href="gfrepcov.html">&lt;&lt; gfrepcov</a></span>
+
+      </td>
+      <td width="40%" class="center">
+      	<span class="top"><a href="section_1f049b1e3111e3d1d538e7603f77f589.html">FOSSEE_Communication_Systems_Toolbox</a></span>
+
+      </td>
+      <td width="30%" class="next">
+      	<span class="next"><a href="iqcoef2imbal.html">iqcoef2imbal &gt;&gt;</a></span>
+
+      </td>
+    </tr></table>
+      <hr />
+    </div>
+  </body>
+</html>

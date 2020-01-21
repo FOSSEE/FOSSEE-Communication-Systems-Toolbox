@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+ *
+ * This help file was generated from gfcosets.sci using help_from_sci().
+ *
+ -->
+
+<refentry version="5.0-subset Scilab" xml:id="gfcosets" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:scilab="http://www.scilab.org"
+          xmlns:db="http://docbook.org/ns/docbook">
+
+  <refnamediv>
+    <refname>gfcosets</refname>
+    <refpurpose>This function produces cyclotomic cosets for a Galois field GF(P)</refpurpose>
+  </refnamediv>
+
+
+<refsection>
+   <title>Description</title>
+   <para>
+GFCS = GFCOSETS(M) produces cyclotomic cosets mod(2^M - 1). Each row of the
+output GFCS contains one cyclotomic coset.
+   </para>
+   <para>
+GFCS = GFCOSETS(M, P) produces cyclotomic cosets mod(P^M - 1), where
+P is a prime number.
+   </para>
+   <para>
+Because the length of the cosets varies in the complete set, %nan is used to
+fill out the extra space in order to make all variables have the same
+length in the output matrix GFCS.
+   </para>
+   <para>
+   </para>
+   <para>
+</para>
+</refsection>
+
+<refsection>
+   <title>Examples</title>
+   <programlisting role="example"><![CDATA[
+c = gfcosets(2,3)
+disp(c)
+
+   ]]></programlisting>
+</refsection>
+
+<refsection>
+   <title>Authors</title>
+   <simplelist type="vert">
+   <member>Pola Lakshmi Priyanka, IIT Bombay</member>
+   </simplelist>
+</refsection>
+</refentry>
