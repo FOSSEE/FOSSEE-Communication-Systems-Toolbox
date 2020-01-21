@@ -1,7 +1,7 @@
 function [code] = arithenco(seq, count)
 //   This function encodes the given sequence using aritmetic coding
 
-//   Calling sequence
+//   Syntax
 //   CODE = ARITHENCO(SEQ, COUNT)
 
 //   Description

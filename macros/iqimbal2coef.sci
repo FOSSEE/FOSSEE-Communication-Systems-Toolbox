@@ -40,7 +40,7 @@ if ( or(Comp_Coef==%nan) | or(Comp_Coef==%inf))
       error('comm:iqimbal2coef: Input arguments should be finte')
 end
 
-if ( size(Amp_Imb_dB) ~= size(Ph_Imb_Deg) ) then\
+if ( size(Amp_Imb_dB) ~= size(Ph_Imb_Deg) ) then
       error('comm:iqimbal2coef: Input arguments should be of same size')
 end
 
@@ -66,3 +66,4 @@ for i = 1:length(Amp_Imb_dB)
 
     Comp_Coef(i) = w2/w1;
 end
+endfunction

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY aaa30023c011c2d00a22694ae6ca55e21 SYSTEM "/home/rupak/communications/FOSSEE-Communication-Systems-Toolbox/help/en_US/arithenco.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='fossee_communication_systems_toolbox_manual'>
+    <title>FOSSEE_Communication_Systems_Toolbox</title>
+  </info>
+
+<part xml:id='section_1f049b1e3111e3d1d538e7603f77f589'>
+<title>FOSSEE_Communication_Systems_Toolbox</title>
+&aaa30023c011c2d00a22694ae6ca55e21;
+</part>
+</book>

@@ -1,0 +1,9 @@
+License of the FOSSEE_Communication_Toolbox
+
+Note that all the files of this toolbox are released into the public domain.
+Therefore, there is no limitation on the use of these files.
+
+Please note that Scilab is released under the terms of the GNU GPL v2.0 
+For more information, see the COPYING file which you should have received
+along with this program.
+

@@ -1,7 +1,7 @@
 function varargout = alignsignals(x,y,varargin)
 //This function aligns the two input signals.
 //
-//Calling Sequence
+//Syntax
 //[Xa Ya] = ALIGNSIGNALS(X,Y)
 //[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG)
 //[Xa Ya] = ALIGNSIGNALS(X,Y,MAXLAG,1)
